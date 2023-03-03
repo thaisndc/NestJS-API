@@ -1,3 +1,4 @@
+//Spec é uma convenção para testes. O arquivo de teste deve ter o mesmo nome do arquivo que está sendo testado, mas com a extensão .spec.ts
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
