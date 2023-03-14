@@ -1,6 +1,6 @@
 import { UpdatePatchUserDTO } from './dto/update-patch-user.dto';
 import { CreateUserDTO } from './dto/create-user.dto';
-import { Injectable } from "@nestjs/common";
+import { Injectable, NotFoundException } from "@nestjs/common";
 import { PrismaService } from "src/prisma/prisma.service";
 import { UpdatePutUserDTO } from './dto/update-put-user.dto';
 
@@ -25,6 +25,8 @@ export class UserService {
     }
 
     async show(id: number) {
+
+                
         return this.prisma.user.findUnique({
             where: {
                 id,
@@ -33,6 +35,9 @@ export class UserService {
     }
 
     async update(id: number, {email, name, password, birthAt}: UpdatePutUserDTO) {
+
+        await this.exists(id);
+
             return this.prisma.user.update({
                 data: {email, name, password, birthAt: birthAt ? new Date(birthAt) : null},
                 where: {
@@ -42,6 +47,8 @@ export class UserService {
     }
 
     async UpdatePartial(id: number, {email, name, password, birthAt}: UpdatePatchUserDTO) {
+
+        await this.exists(id);
 
         const data: any = {};
 
@@ -72,10 +79,23 @@ export class UserService {
     }
 
     async delete(id: number) {
+
+       await this.exists(id);
+
         return this.prisma.user.delete({
             where: {
                 id,
             }
         });
+    }
+
+    async exists (id: number) {
+        if (!(await this.prisma.user.count({
+            where: {
+                id,
+            }
+        }))) {
+            throw new NotFoundException(`O usuário com o id ${id} não foi encontrado`);
+        }
     }
 }
