@@ -10,24 +10,18 @@ Com o avanço das aplicações na internet o JavaScript ganhou força e se popul
 Como exemplo podemos citar React, Angular e Vue.
 Porém no server-side não tivemos esta mesma realidade, embora Express, Fastify e até mesmo o Adonis ajudaram muito, nenhum era capaz de resolver todos os desafios de uma aplicação JavaScript no servidor.
 Por isso, inspirado no Angular o NestJS foi criado para permitir que desenvolvedores e equipes trabalhem em aplicações testáveis, escaláveis e pouco acopladas.
-=======
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
 
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
->>>>>>> 7b43dd891140ecf9f7c524c53e9a046ea985b0ae
 
 ## Quando usar o NestJS?
 Quando for necessário criar uma Aplicação Web, API ou Micro Serviço com a linguagem JavaScript é recomendado usar o NestJS.
 Embora seja possível fazer o mesmo usando apenas NodeJS, Express, Adonis ou similares, o padrão e estrutura do Nest facilita muito a criação e a manutenção do código.
+
 
 ## Arquitetura Cliente-Servidor
 O modelo cliente-servidor, em computação, é uma estrutura de aplicação distribuída que distribui as tarefas e cargas de trabalho entre os fornecedores de um recurso ou serviço, designados como servidores, e os requerentes dos serviços, designados como clientes.
 Um servidor, também chamado de host, é um computador que hospeda um serviço ou aplicação que normalmente pode ser acessado via rede de computadores, como por exemplo a rede mundial, internet.
 Um cliente é um computador, tablet, celular ou dispositivo que possui um programa ou aplicação que solicita dados de um servidor.
 
-----------------
 
 ## Nest CLI
 A maneira recomendada para criar um novo projeto e depois ainda conseguir criar recursos do projeto é usando o Command Line Interface (CLI) do Nest.
@@ -85,8 +79,6 @@ No NestJS podemos validar os Objetos de Transferência de Dados usando uma bibli
 ## Instalação
 Após instalar as dependências com o comando: npm i class-validator class-transformer
 Devemos “ensinar” nossa aplicação a usar essas bibliotecas ao receber solicitações (Request). Essa configuração deve ser feita no bootstrap da nossa aplicação.
-=======
->>>>>>> 7b43dd891140ecf9f7c524c53e9a046ea985b0ae
 
 
 ## Uso de DTO
