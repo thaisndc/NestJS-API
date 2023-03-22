@@ -42,5 +42,4 @@ export class AuthController{
         return this.AuthService.checkToken(Body.token);
     }
 
-
 }
